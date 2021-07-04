@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Helvetica;
+}
+
+body{
+    background: #eee;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.header{
+    background-color: #f5ba13;
+    padding: 1rem 2rem;
+}
+
+.footer{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    color: #aa0;
+}
+
+.note{
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+    text-align: center;
+}
+
+.note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
