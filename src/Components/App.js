@@ -1,25 +1,43 @@
 /*eslint-disable*/
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from "./Footer";
 import Header from "./Header";
 import Note from "./Note";
-import notes from "../notes";
+import CreateArea from './CreateArea';
 
 const App = ()=> {
+
+    const [notes, setNotes] = useState([])
+
+    const addNote = (newNote) =>{
+        setNotes((prevNotes)=>{
+            return [...prevNotes, newNote];
+        });
+    };
+
+    const deleteNote = (id)=>{
+        setNotes((prevNotes)=>{
+            return prevNotes.filter((item,index)=>{
+                return index !== id;
+            });
+        });
+    }
+
     return (
         <div>
             <Header />
-            {
-                notes.map((note) => {
-                    return (
-                        <Note 
-                            key= {note.key}
-                            title={note.title} 
-                            content={note.content} 
-                        />
-                    );
-                })
-            }
+            <CreateArea onAdd = {addNote}/>
+            {notes.map((note, index)=>{
+                return (
+                    <Note 
+                        key={index}
+                        id={index}  
+                        title={note.title}
+                        content={note.content}
+                        onDelete = {deleteNote}
+                    />
+                );
+            })}
             <Footer />
         </div>
   );
