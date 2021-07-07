@@ -1,3 +1,6 @@
+# A simple Note Keeper App
+This is an app which helps a user to store notes. It has basic functionalities of adding and deleting notes .
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
