@@ -1,10 +1,10 @@
 import React from 'react';
-import "../styles.css";
+import HighlightIcon from '@material-ui/icons/Highlight';
 
 const Header =()=>{
     return (
         <header>
-            <h1 className="header">Keeper App</h1>
+            <h1 className="header"><HighlightIcon /> Keeper App</h1>
         </header>
     );
 } 
